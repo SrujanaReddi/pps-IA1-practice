@@ -14,7 +14,7 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x7ab: file p1final.c, line 16.
+Breakpoint 1 at 0x7b1: file p1final.c, line 16.
 (gdb) r
 Starting program: /home/runner/pps-IA1-practice-1/a.out 
 warning: Error disabling address space randomization: Operation not permitted
@@ -22,15 +22,14 @@ warning: Error disabling address space randomization: Operation not permitted
 Breakpoint 1, main () at p1final.c:16
 16  {
 (gdb) n
-18      input(&x,&y);
+18    input(&x,&y);
 (gdb) s
-input (a=0x7fffc99d6b6c, b=0x7fffc99d6b70) at p1final.c:4
-4       printf("enter any number :");
+input (a=0x7ffc92a11c1c, b=0x7ffc92a11c20) at p1final.c:4
+4     printf("enter the numbers");
 (gdb) n
-5       scanf("%d %d",a,b);
+5     scanf("%d%d",a,b);
 (gdb) n
-enter any number :1
-2
+enter the numbers1 2
 6   }
 (gdb) p *a
 $1 = 1
@@ -38,24 +37,23 @@ $1 = 1
 $2 = 2
 (gdb) n
 main () at p1final.c:19
-19      add(x,y,&z);
+19    add(x,y,&z);
 (gdb) s
-add (a=1, b=2, sum=0x7fffc99d6b74) at p1final.c:9
-9       *sum=a+b;
+add (a=1, b=2, sum=0x7ffc92a11c24) at p1final.c:9
+9     *sum=a+b;
 (gdb) n
 10  }
 (gdb) n
 main () at p1final.c:20
-20      output(x,y,z);
+20    output(x,y,z);
 (gdb) s
 output (a=1, b=2, sum=3) at p1final.c:13
-13      printf("sum of two numbers is %d",sum);
+13    printf("sum of two numbers is %d+%d=%d",a,b,sum);
 (gdb) n
 14  }
 (gdb) n
 main () at p1final.c:21
-21      return 0;
-(gdb) n
-22  }(gdb) c
+21    return 0;
+(gdb) c
 Continuing.
-sum of two numbers is 3[Inferior 1 (process 31) exited normally]
+sum of two numbers is 1+2=3[Inferior 1 (process 327) exited normally]

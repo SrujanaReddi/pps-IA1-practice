@@ -1,22 +1,22 @@
-#include <stdio.h>
-int input(int *a,int *b)
+#include<stdio.h>
+int input(int*a,int*b)
 {
-    printf("enter any number :");
-    scanf("%d %d",a,b);
+  printf("enter the numbers");
+  scanf("%d%d",a,b);
 }
-int add(int a,int b, int *sum)
+int add(int a,int b,int*sum)
 {
-    *sum=a+b;
+  *sum=a+b;
 }
 int output(int a,int b,int sum)
 {
-    printf("sum of two numbers is %d",sum);
+  printf("sum of two numbers is %d+%d=%d",a,b,sum);
 }
 int main()
 {
-    int x,y,z;
-    input(&x,&y);
-    add(x,y,&z);
-    output(x,y,z);
-    return 0;
+  int x,y,z;
+  input(&x,&y);
+  add(x,y,&z);
+  output(x,y,z);
+  return 0;
 }
