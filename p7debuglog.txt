@@ -31,11 +31,17 @@ input () at p7final.c:9
 (gdb) n
 enter the real part:2
 13    printf("enter the imaginary part:");
+(gdb) 3
+Undefined command: "3".  Try "help".
 (gdb) n
 14    scanf("%f",&c.imaginary);
 (gdb) n
 enter the imaginary part:3
 15    return c;
+(gdb) p c.real
+$1 = 2
+(gdb) p c.imaginary
+$2 = 3
 (gdb) n
 16  }
 (gdb) n
@@ -56,6 +62,10 @@ enter the real part:4
 (gdb) n
 enter the imaginary part:5
 15    return c;
+(gdb) p c.real
+$3 = 4
+(gdb) p c.imaginary
+$4 = 5
 (gdb) n
 16  }
 (gdb) n
@@ -85,4 +95,5 @@ main () at p7final.c:35
 36  }
 (gdb) c
 Continuing.
-the sum is 6.00000+8.00000i [Inferior 1 (process 62) exited normally]
+the sum is 6.00000+8.00000i [Inferior 1 (process 124) exited normally]
+(gdb) 
