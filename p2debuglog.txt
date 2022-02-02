@@ -86,7 +86,7 @@ main () at p2final.c:31
 31    output(x,y,z,big);
 (gdb) s
 output (a=1, b=1, c=0, big=1) at p2final.c:22
-22    printf("biggest number is %d,%d & %d is %d\n",a,b,c,big);
+22    printf("biggest number in %d,%d & %d is %d\n",a,b,c,big);
 (gdb) n
 biggest number is 1,1 & 0 is 1
 23  }
