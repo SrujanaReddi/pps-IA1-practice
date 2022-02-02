@@ -11,7 +11,7 @@ float my_sqrt(int n)
 {
   double start,end,mid;
   start=0,end=n;
-  while((end-start)>=0.000001)
+  while((end-start)>=0.0000001)
   {
     mid=(start+end)/2;
     if(mid*mid<n)

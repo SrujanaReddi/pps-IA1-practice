@@ -42,7 +42,7 @@ main () at p5final.c:36
 my_sqrt (n=2) at p5final.c:13
 13    start=0,end=n;
 (gdb) n
-14    while((end-start)>=0.000001)
+14    while((end-start)>=0.0000001)
 (gdb) n
 16      mid=(start+end)/2;
 (gdb) n
@@ -52,50 +52,27 @@ my_sqrt (n=2) at p5final.c:13
 (gdb) n
 20      if(mid*mid>=n)
 (gdb) n
-14    while((end-start)>=0.000001)
+14    while((end-start)>=0.0000001)
 (gdb) n
 16      mid=(start+end)/2;
 (gdb) n
 17      if(mid*mid<n)
-(gdb) n
-20      if(mid*mid>=n)
-(gdb) n
-21      end=mid;
-(gdb) n
-14    while((end-start)>=0.000001)
-(gdb) n
-16      mid=(start+end)/2;
-(gdb) n
-17      if(mid*mid<n)
-(gdb) n
-18      start=mid;
-(gdb) n
-20      if(mid*mid>=n)
-(gdb) n
-14    while((end-start)>=0.000001)
-(gdb) n
-16      mid=(start+end)/2;
-(gdb) n
-17      if(mid*mid<n)
-(gdb) n
-18      start=mid;
 (gdb) finish
-Run till exit from #0  my_sqrt (n=2) at p5final.c:18
-0x00005629a2c0084e in main () at p5final.c:36
+Run till exit from #0  my_sqrt (n=2) at p5final.c:17
+0x000055c9ea20084e in main () at p5final.c:36
 36    b=my_sqrt(a);
-Value returned is $2 = 1.41421413
+Value returned is $2 = 1.41421366
 (gdb) n
 37    output(b);
 (gdb) s
-output (sqrt_result=1.41421413) at p5final.c:28
+output (sqrt_result=1.41421366) at p5final.c:28
 28    printf("sq root is %f",sqrt_result);
 (gdb) n
 29  }
 (gdb) n
 main () at p5final.c:38
 38    return 0;
-(gdb) n
-39  }(gdb) c
+(gdb) c
 Continuing.
-sq root is 1.414214[Inferior 1 (process 325) exited normally]
+sq root is 1.414214[Inferior 1 (process 524) exited normally]
 (gdb) 
